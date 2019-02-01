@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet"/>
+    <script src="code.js" async></script>
+</head>
+<body>
+  <div class="dateRangePicker" >
+    <div class="title">
+      <h2></h2>
+    </div>
+  <div class="img">
+    
+      <select class='select' onclick="dateRange()">
+        <option value="Custom">Custom</option>
+        <option selected value="Today">Today</option>
+        <option value="Yesterday">Yesterday</option>
+        <option value="Last 7 days">Last 7 days</option>
+        <option value="Last 30 days">Last 30 days</option>
+        <option value="Last 90 days">Last 90 days</option>
+       </select>
+    
+    </div>
+    <div class="img">
+        <select name='timezone'>
+          <option value="timezone +5">Timezone +5</option>
+          <option value="timezone + 4">Timezone +4</option>
+          <option selected value="timezone + 3">Timezone +3</option>
+          <option value="timezone + 2">Timezone +2</option>
+          <option value="timezone + 1">Timezone +1</option>
+          <option value="timezone">Timezone 0</option>
+         </select>
+         
+        </div>
+
+      <div class="inputDate"> 
+        
+        <div id="from">
+        <label>From</label><br> 
+        <input type="date" class="first" required="required" max='' onchange="startDate();" hidden/>
+        <input type="text" id="firstinput"  onclick="changeInputFirst();" />
+        </div>
+        <div id="to">
+        <label>To</label><br>
+        <input type="date" class="second" required="required" min="" onchange="finishDate();" hidden/>
+        <input type="text" id="secondinput"  onclick="changeInputSecond();" />
+      </div>
+    </div>
+    <div class="buttons">
+    <button id="cancel">CANCEL</button>
+    <button id="apply">APPLY</button>
+  </div>
+  </div>
+</body>
+</html>
